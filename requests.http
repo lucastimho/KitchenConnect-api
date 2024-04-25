@@ -1,0 +1,59 @@
+### RECIPES INDEX
+GET http://localhost:3000/recipes.json
+
+
+### RECIPES SHOW
+
+GET http://localhost:3000/recipes/18.json
+
+### RECIPES CREATE
+
+POST http://localhost:3000/recipes.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MzUwMTUxOTV9.bgYHp65_NPboOwZIVFL_cb2r59qyGKTw11aJTjQn80I
+Content-Type: application/json
+
+{
+  "title": "pizza",
+  "chef": "Kelly",
+  "ingredients": "crust, pineapple",
+  "directions": "put the pineapple on the pizza!",
+  "prep_time": 8
+}
+
+### RECIPES UPDATE
+
+PATCH http://localhost:3000/recipes/9.json
+Content-Type: application/json
+
+{
+  "title": "Pineapple Mud Pie",
+  "ingredients": "Pineapple, chocolate",
+  "directions": "mix",
+  "prep_time": 30
+}
+
+### RECIPE DELETE
+
+DELETE http://localhost:3000/recipes/10.json
+
+
+### Users create (signup)
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "Jonathan",
+  "email": "jonathan@example.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+
+### Sessions create (login)
+POST http://localhost:3000/sessions
+Content-Type: application/json
+
+{
+  "email": "jonathan@example.com",
+  "password": "password"
+}
+
